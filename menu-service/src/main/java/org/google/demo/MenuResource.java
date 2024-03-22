@@ -33,7 +33,7 @@ import javax.ws.rs.core.Response;
 
 import io.quarkus.panache.common.Sort;
 
-@Path ("/menu")
+@Path ("/menus")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class MenuResource {
@@ -53,19 +53,19 @@ public class MenuResource {
     }
 
     @GET
-    @Path("/ready")
+    @Path("/status/ready")
     public List<Menu> getAllReady() throws Exception {
         return Menu.findReady();
     }
 
     @GET
-    @Path("/failed")
+    @Path("/status/failed")
     public List<Menu> getAllFailed() throws Exception {
         return Menu.findFailed();
     }
 
     @GET
-    @Path("/processing")
+    @Path("/status/processing")
     public List<Menu> getAllProcessing() throws Exception {
         return Menu.findProcessing();
     }
