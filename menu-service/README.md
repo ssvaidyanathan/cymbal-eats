@@ -128,7 +128,7 @@ You'll need a tool like httpie.
 
 ### Test GET
 ```
-http GET $URL/menu
+http GET $URL/menus
 ```
 
 Result
@@ -173,7 +173,7 @@ content-length: 1177
 ### Test GET Ready 
 
 ```
-http GET $URL/menu/ready
+http GET $URL/menus/ready
 ```
 
 Outputs only items that are ready
@@ -209,7 +209,7 @@ content-length: 685
 ### Test GET Failed
 
 ```
-http GET $URL/menu/failed
+http GET $URL/menus/failed
 ```
 
 Outputs only failed menu items
@@ -235,7 +235,7 @@ content-length: 493
 ### Test GET by Id
 
 ```
-http GET $URL/menu/2
+http GET $URL/menus/2
 ```
 
 Output
@@ -267,7 +267,7 @@ content-type: application/json
 
 Note the POST request doesnt include status field.
 ```
-http POST $URL/menu itemName=Rasgulla itemPrice=3.2 tagLine="East Indian Cottage Cheese dumplings" itemImageURL="https://rakskitchen.net/wp-content/uploads/2010/10/homemade-rasgulla.jpg" itemThumbnailURL="https://rakskitchen.net/wp-content/uploads/2010/10/homemade-rasgulla.jpg"
+http POST $URL/menus itemName=Rasgulla itemPrice=3.2 tagLine="East Indian Cottage Cheese dumplings" itemImageURL="https://rakskitchen.net/wp-content/uploads/2010/10/homemade-rasgulla.jpg" itemThumbnailURL="https://rakskitchen.net/wp-content/uploads/2010/10/homemade-rasgulla.jpg"
 ```
 
 Output as below. Note the status is automatically set to `Processing`
@@ -345,7 +345,7 @@ content-length: 1495
 Test GET with `processing`
 
 ```
-http GET $URL/menu/processing
+http GET $URL/menus/processing
 ```
 
 Output
@@ -372,7 +372,7 @@ content-length: 319
 ### Test PUT
 
 ```
-http PUT $URL/menu/4 itemName=Roshogulla itemPrice=3.2 tagLine="East Indian Cottage Cheese dumplings" itemImageURL="https://rakskitchen.net/wp-content/uploads/2010/10/homemade-rasgulla.jpg" itemThumbnailURL="https://rakskitchen.net/wp-content/uploads/2010/10/homemade-rasgulla.jpg" status="Ready"
+http PUT $URL/menus/4 itemName=Roshogulla itemPrice=3.2 tagLine="East Indian Cottage Cheese dumplings" itemImageURL="https://rakskitchen.net/wp-content/uploads/2010/10/homemade-rasgulla.jpg" itemThumbnailURL="https://rakskitchen.net/wp-content/uploads/2010/10/homemade-rasgulla.jpg" status="Ready"
 ```
 Output
 
@@ -437,7 +437,7 @@ content-length: 1000
 ### Test DELETE
 
 ```
-http DELETE $URL/menu/4
+http DELETE $URL/menus/4
 ```
 
 Output
